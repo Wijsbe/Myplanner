@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://Wijsbe.github.io/myplanner",
+  "homepage": "https://Wijsbe.github.io/Myplanner",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
