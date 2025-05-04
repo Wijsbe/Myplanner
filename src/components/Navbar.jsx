@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FiSun, FiMoon, FiList, FiCalendar, FiActivity, FiClock } from 'react-icons/fi';
+import { FiSun, FiMoon, FiList, FiCalendar, FiActivity, FiClock, FiTarget } from 'react-icons/fi';
 import logo from '../assets/logo.svg';
 
 const Navbar = ({ darkMode, setDarkMode }) => {
@@ -52,6 +52,16 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               >
                 <FiClock className="mr-1" /> Shift Organizer
               </Link>
+              <Link
+                to="/workouts"
+                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                  isActive('/workouts')
+                    ? 'border-primary-500 text-gray-900 dark:text-white'
+                    : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-white hover:border-gray-300 dark:hover:border-gray-700'
+                }`}
+              >
+                <FiActivity className="mr-1" /> Workout Planner
+              </Link>
             </div>
           </div>
           <div className="flex items-center">
@@ -72,7 +82,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
       {/* Mobile menu */}
       <div className="sm:hidden border-t border-gray-200 dark:border-gray-700">
-        <div className="grid grid-cols-3 gap-1 px-2 py-2">
+        <div className="grid grid-cols-4 gap-1 px-2 py-2">
           <Link
             to="/"
             className={`flex justify-center items-center px-2 py-2 rounded-md text-sm font-medium ${
@@ -102,6 +112,16 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             }`}
           >
             <FiClock className="mr-1" /> Shifts
+          </Link>
+          <Link
+            to="/workouts"
+            className={`flex justify-center items-center px-2 py-2 rounded-md text-sm font-medium ${
+              isActive('/workouts')
+                ? 'bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300'
+                : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+            }`}
+          >
+            <FiActivity className="mr-1" /> Workouts
           </Link>
         </div>
       </div>

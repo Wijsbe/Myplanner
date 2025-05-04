@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import ShiftyPage from './pages/ShiftyPage';
 import SchedulePage from './pages/SchedulePage';
 import ShiftOrganizerPage from './pages/ShiftOrganizerPage';
+import WorkoutPlannerPage from './pages/WorkoutPlannerPage';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => localStorage.getItem('theme') === 'dark');
@@ -27,6 +28,7 @@ function App() {
             <Route path="/" element={<ShiftyPage />} />
             <Route path="/schedule" element={<SchedulePage />} />
             <Route path="/shifts" element={<ShiftOrganizerPage />} />
+            <Route path="/workouts" element={<WorkoutPlannerPage />} />
           </Routes>
         </main>
         <footer className="bg-white dark:bg-gray-800 shadow-soft py-4 px-4 sm:px-6 lg:px-8">
